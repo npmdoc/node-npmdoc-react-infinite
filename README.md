@@ -21,56 +21,24 @@
 ```json
 
 {
-    "name": "react-infinite",
-    "version": "0.10.0",
-    "description": "A browser-ready efficient scrolling container based on UITableView",
-    "main": "build/react-infinite.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/seatgeek/react-infinite"
+    "author": {
+        "name": "Gareth Tan"
     },
-    "keywords": [
-        "react",
-        "react-component",
-        "scrolling",
-        "uitableview",
-        "infinite"
-    ],
-    "author": "Gareth Tan",
-    "license": "BSD-3-Clause",
+    "browser": "build/react-infinite.js",
+    "browserify": {
+        "transform": [
+            "envify"
+        ]
+    },
     "bugs": {
         "url": "https://github.com/seatgeek/react-infinite/issues"
     },
-    "browser": "build/react-infinite.js",
-    "scripts": {
-        "test": "node ./node_modules/.bin/jest",
-        "lint": "./node_modules/.bin/eslint ./src --ext .jsx --ext .js",
-        "fix": "./node_modules/.bin/eslint --fix --ext .jsx --ext .js ./src ./__tests__ ./pipeline",
-        "typecheck": "./node_modules/.bin/flow version && ./node_modules/.bin/flow check",
-        "verify": "npm test && npm run typecheck && npm run lint",
-        "preversion": "npm run verify",
-        "prepublish": "gulp release"
+    "dependencies": {
+        "lodash.isarray": "3.0.4",
+        "lodash.isfinite": "3.2.0",
+        "object-assign": "4.0.1"
     },
-    "jest": {
-        "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-        "testPathDirs": [
-            "<rootDir>/__tests__",
-            "<rootDir>/src"
-        ],
-        "testPathIgnorePatterns": [
-            "<rootDir>/__tests__/helpers"
-        ],
-        "testFileExtensions": [
-            "js",
-            "jsx"
-        ],
-        "unmockedModulePathPatterns": [
-            "<rootDir>/node_modules/react"
-        ],
-        "collectCoverage": true,
-        "verbose": true
-    },
-    "homepage": "https://github.com/seatgeek/react-infinite",
+    "description": "A browser-ready efficient scrolling container based on UITableView",
     "devDependencies": {
         "babel-eslint": "^4.0.7",
         "babel-jest": "^5.3.0",
@@ -102,20 +70,67 @@
         "watchify": "^3.4.0",
         "yargs": "^1.3.2"
     },
-    "dependencies": {
-        "lodash.isarray": "3.0.4",
-        "lodash.isfinite": "3.2.0",
-        "object-assign": "4.0.1"
+    "directories": {},
+    "dist": {
+        "shasum": "04567469dd26b2f0d53bd9793bafbcd26e05c58b",
+        "tarball": "https://registry.npmjs.org/react-infinite/-/react-infinite-0.10.0.tgz"
     },
+    "gitHead": "e453e658e345bd20be00e119161da69d2bb33cf4",
+    "homepage": "https://github.com/seatgeek/react-infinite",
+    "jest": {
+        "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+        "testPathDirs": [
+            "<rootDir>/__tests__",
+            "<rootDir>/src"
+        ],
+        "testPathIgnorePatterns": [
+            "<rootDir>/__tests__/helpers"
+        ],
+        "testFileExtensions": [
+            "js",
+            "jsx"
+        ],
+        "unmockedModulePathPatterns": [
+            "<rootDir>/node_modules/react"
+        ],
+        "collectCoverage": true,
+        "verbose": true
+    },
+    "keywords": [
+        "react",
+        "react-component",
+        "scrolling",
+        "uitableview",
+        "infinite"
+    ],
+    "license": "BSD-3-Clause",
+    "main": "build/react-infinite.js",
+    "maintainers": [
+        {
+            "name": "garetht"
+        }
+    ],
+    "name": "react-infinite",
+    "optionalDependencies": {},
     "peerDependencies": {
         "react": "^15.0.0",
         "react-dom": "^15.0.0"
     },
-    "browserify": {
-        "transform": [
-            "envify"
-        ]
-    }
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/seatgeek/react-infinite.git"
+    },
+    "scripts": {
+        "fix": "eslint --fix --ext .jsx --ext .js ./src ./__tests__ ./pipeline",
+        "lint": "eslint ./src --ext .jsx --ext .js",
+        "prepublish": "gulp release",
+        "preversion": "npm run verify",
+        "test": "node ./node_modules/.bin/jest",
+        "typecheck": "flow version && ./node_modules/.bin/flow check",
+        "verify": "npm test && npm run typecheck && npm run lint"
+    },
+    "version": "0.10.0",
+    "bin": {}
 }
 ```
 
